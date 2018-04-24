@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Examples</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    </head>
+    <body>
+        <style>
+            .sec-space {
+                padding: 20px 0;
+            }
+            .side-nav.affix {
+                top: 20px;
+            }
+            .grid-ex {
+                height: 40px;
+                background: #ddd;
+                text-align: center;
+                display: table-cell;
+                width: 100%;
+                vertical-align: middle;
+            }
+            .d-table {
+                display: table;
+            }
+            .pos-rel {
+                position: relative;
+            }
+            .navbar-fixed-top {
+                position: absolute;
+            }
+        </style>
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <p class="mb-20">
+                    <strong>In this page you can find the list of bootstrap components with example and working markup. 
+                        You can simply use by copy the markup section and paste it in the cms page or block wherever you want.</strong>
+                </p>
+                <h3 id="sec1" class="border-title">Text/Typography</h3>
+                <h3>Default Font</h3>
+                <p>Default font-size is 14px, with a line-height of 20px.
+                    This is applied to the &lt;body&gt; element and all paragraphs (&lt;p&gt;).</p>
+
+                <h3>&lt;h1&gt; - &lt;h6&gt;</h3>
+                <h4>Example :</h4>
+                <div class="example">
+                    <h1>h1 heading (36px)</h1>
+                    <h2>h2 heading (30px)</h2>
+                    <h3>h3 heading (24px)</h3>
+                    <h4>h4 heading (18px)</h4>
+                    <h5>h5 heading (14px)</h5>
+                    <h6>h6 heading (12px)</h6>
+                </div>
+                <h4>Markup :</h4>
+                <pre><code>
+  &lt;h1&gt;h1 heading (36px)&lt;/h1&gt;<br />
+  &lt;h2&gt;h2 heading (30px)&lt;/h2&gt;<br />
+  &lt;h3&gt;h3 heading (24px)&lt;/h3&gt;<br />
+  &lt;h4&gt;h4 heading (18px)&lt;/h4&gt;<br />
+  &lt;h5&gt;h5 heading (14px)&lt;/h5&gt;<br />
+  &lt;h6&gt;h6 heading (12px)&lt;/h6&gt;<br />
+</code></pre>
+                <h3>Other typography elements</h3>
+                <table class="table table-bordered">
+                    <thead class="thead-default"><tr><th>Element</th><th>Example</th><th>Markup</th></tr></thead>
+                    <tbody>
+                        <tr><td>&lt;small&gt;</td><td><small>this is a small text</small></td><td> &lt;small&gt;small text&lt;/small&gt;</td></tr>
+                        <tr><td>&lt;mark&gt;</td><td> Use the mark element to<mark> highlight</mark> text.</td><td>&lt;mark&gt; highlight&lt;/mark&gt; </td></tr>
+                        <tr><td>&lt;abbr&gt;</td><td> The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</td><td> &lt;abbr title="World Health Organization" &gt;WHO&lt;/abbr&gt;</td></tr>
+                        <tr><td>&lt;blockquote&gt; </td><td><blockquote>
+                                    <p>The blockquote element is used to present content from another source.</p>
+                                    <footer>From WWF's website</footer>
+                                </blockquote> </td><td> &lt;blockquote&gt;<br />
+                                &lt;p&gt;The blockquote element is used to present content from another source.&lt;/p&gt;<br />
+                                &lt;footer&gt;From WWF's website&lt;/footer&gt;<br />
+                                &lt;/blockquote&gt;</td></tr>
+                        <tr><td>&lt;dl&gt; </td><td> <dl>
+                                    <dt>Coffee</dt>
+                                    <dd>- black hot drink</dd>
+                                    <dt>Milk</dt>
+                                    <dd>- white cold drink</dd>
+                                </dl>  </td><td>&lt;dl&gt;<br />
+                                &lt;dt&gt;Coffee&lt;/dt&gt;<br />
+                                &lt;dd&gt;- black hot drink&lt;/dd&gt;<br />
+                                &lt;dt&gt;Milk&lt;/dt&gt;<br />
+                                &lt;dd&gt;- white cold drink&lt;/dd&gt;<br />
+                                &lt;/dl&gt;   </td></tr>
+                        <tr><td>&lt;kbd&gt; </td><td> Use <kbd>ctrl + p</kbd> to open the dialog box</td><td> &lt;kbd&gt;ctrl + p&lt;/kbd&gt;</td></tr>
+                        <tr><td>&lt;pre&gt; </td><td> <pre>
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks.
+                                </pre></td><td> &lt;pre&gt;content&lt;/pre&gt;</td></tr>
+                    </tbody>
+                </table>
+                <h3>Typography Classes</h3>
+                Classes that can be used to make changes on text.
+                <h4>Example :</h4>
+                <p class="text-muted">This text is muted.</p>
+                <h4>Markup :</h4>
+                <pre>&lt;p class="text-muted"&gt;This text is muted.&lt;/p&gt;</pre>
+
+                <p><strong>Contextual Colors</strong></p>
+                <table class="table table-bordered">
+                    <thead class="thead-default"><tr><th>Class</th><th>Example</th><th>Markup</th></tr></thead>
+                    <tbody>
+                        <tr><td>text-muted </td><td> <span class="text-muted">text is muted.</span></td><td> &lt;p class="text-muted"&gt;text is muted.&lt;/p&gt;</td></tr>
+                        <tr><td> text-primary</td><td><span class="text-primary">text is important.</span> </td><td> &lt;p class="text-primary"&gt;text is important.&lt;/p&gt;</td></tr>
+                        <tr><td> text-success</td><td><span class="text-success">indicates success.</span> </td><td>&lt;p class="text-success"&gt;indicates success.&lt;/p&gt; </td></tr>
+                        <tr><td> text-info</td><td><span class="text-info">represents some information.</span> </td><td>&lt;p class="text-info"&gt;represents some information.&lt;/p&gt; </td></tr>
+                        <tr><td> text-warning</td><td> <span class="text-warning">represents a warning.</span></td><td> &lt;p class="text-warning"&gt;represents a warning.&lt;/p&gt;</td></tr>
+                        <tr><td>text-danger </td><td><span class="text-danger">represents danger.</span> </td><td>&lt;p class="text-danger"&gt;represents danger.&lt;/p&gt; </td></tr>
+                    </tbody>
+                </table>
+                <p><strong>Contextual Backgrounds</strong></p>
+                <table class="table table-bordered">
+                    <thead class="thead-default"><tr><th>Class</th><th>Example</th><th>Markup</th></tr></thead>
+                    <tbody>
+                        <tr><td> bg-primary</td><td><span class="bg-primary">&nbsp;important.</span> </td><td> &lt;p class="bg-primary"&gt;important.&lt;/p&gt;</td></tr>
+                        <tr><td> bg-success</td><td><span class="bg-success">&nbsp;indicates success.</span> </td><td>&lt;p class="bg-success"&gt;indicates success.&lt;/p&gt; </td></tr>
+                        <tr><td> bg-info</td><td><span class="bg-info">&nbsp;represents some information.</span> </td><td>&lt;p class="bg-info"&gt;represents some information.&lt;/p&gt; </td></tr>
+                        <tr><td> bg-warning</td><td> <span class="bg-warning">&nbsp;represents a warning.</span></td><td> &lt;p class="bg-warning"&gt;represents a warning.&lt;/p&gt;</td></tr>
+                        <tr><td>bg-danger </td><td><span class="bg-danger">&nbsp;represents danger.</span> </td><td>&lt;p class="bg-danger"&gt;represents danger.&lt;/p&gt; </td></tr>
+                    </tbody>
+                </table>
+                <p><strong>More typography classes</strong></p>
+                <table class="table table-bordered">
+                    <thead class="thead-default"><tr><th>Class</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr><td>lead</td><td>Makes a paragraph stand out</td></tr>
+                        <tr><td>small</td><td>smaller text (set to 85% of the size of the parent)</td></tr>
+                        <tr><td>text-left</td><td> left-aligned text</td></tr>
+                        <tr><td>text-center</td><td>center-aligned text</td></tr>
+                        <tr><td>text-right</td><td>right-aligned</td></tr>
+                        <tr><td>text-justify</td><td> justified text</td></tr>
+                        <tr><td>text-nowrap</td><td>no wrap text</td></tr>
+                        <tr><td>text-lowercase</td><td>lowercased text</td></tr>
+                        <tr><td>text-uppercase</td><td> uppercased text</td></tr>
+                        <tr><td>text-capitalize</td><td>capitalized text</td></tr>
+                        <tr><td>border-title</td><td>title with border</td></tr>
+                    </tbody>
+                </table>
+
+                <section class="sec-space">
+                    <h3 id="sec2" class="border-title">Tables</h3>
+                    <h3>Basic Table</h3>
+                    <p>A basic table has a light padding and only horizontal dividers.</p>
+                    <h4>Example :</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Markup :</h4>
+                    <pre>&lt;table class="table"&gt;<br />
+    &lt;thead&gt;<br />
+      &lt;tr&gt;<br />
+        &lt;th&gt;Firstname&lt;/th&gt;
+        &lt;th&gt;Lastname&lt;/th&gt;
+        &lt;th&gt;Email&lt;/th&gt;
+      &lt;/tr&gt;<br />
+    &lt;/thead&gt;<br />
+    &lt;tbody&gt;<br />
+      &lt;tr&gt;<br />
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;Doe&lt;/td&gt;
+        &lt;td&gt;john@example.com&lt;/td&gt;
+      &lt;/tr&gt;<br />
+      &lt;tr&gt;<br />
+        &lt;td&gt;Mary&lt;/td&gt;
+        &lt;td&gt;Moe&lt;/td&gt;
+        &lt;td&gt;mary@example.com&lt;/td&gt;
+      &lt;/tr&gt;<br />
+      &lt;tr&gt;<br />
+        &lt;td&gt;July&lt;/td&gt;
+        &lt;td&gt;Dooley&lt;/td&gt;
+        &lt;td&gt;july@example.com&lt;/td&gt;
+      &lt;/tr&gt;<br />
+    &lt;/tbody&gt;<br />
+  &lt;/table&gt;
+                    </pre>
+                    <h3>Striped Rows</h3>
+                    <h4>Example :</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Markup :</h4>
+                    <p>Same markup used in basic table with a new class "table-striped".
+
+                    <pre>&lt;table class="table table-striped"&gt;<br />
+...
+&lt;/table&gt;
+                    </pre>
+                    <h3>Bordered Table</h3>
+                    The "table-bordered" class adds borders on all sides of the table and cells.
+                    <h4>Example :</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Markup :</h4>
+                    <p>Same markup used on basic table with a new class "table-bordered".
+
+                    <pre>&lt;table class="table table-bordered"&gt;<br />
+...
+&lt;/table&gt;
+                    </pre>
+                    <h3>Hover Rows</h3>
+                    The "table-hover" class adds a hover effect (grey background color) on table rows.
+                    <h4>Example :</h4>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Markup :</h4>
+                    <p>Same markup used on basic table with a new class "table-hover".
+
+                    <pre>&lt;table class="table table-hover"&gt;<br />
+...
+&lt;/table&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec3" class="border-title">Wells</h3>
+                    <p>An element with a gray background color and some padding.<br>
+                        Note: Well size can be changed by the classes "well-sm" and "well-lg".</p>
+                    <h4>Example :</h4>
+                    <div class="well">Basic Well</div>
+                    <h4>Markup :</h4>
+                    <pre>&lt;div class="well"&gt;Basic Well&lt;/div&gt;</pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec4" class="border-title">Alerts</h3>
+                    <p>Alerts are created with the "alert" class, followed by one of the four contextual classes "alert-success", "alert-info", "alert-warning" or "alert-danger"</p>
+                    <h4>Example :</h4>
+                    <div class="alert alert-success">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Success!</strong> Indicates a successful or positive action.
+                    </div>
+                    <div class="alert alert-info">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Success!</strong> Indicates a successful or positive action.
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;div class="alert alert-success"&gt;<br />
+    &lt;a href="#" class="close" data-dismiss="alert" aria-label="close"&gt;&amp;times;&lt;/a&gt;<br />
+  &lt;strong&gt;Success!&lt;/strong&gt; Indicates a successful or positive action.<br />
+&lt;/div&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec5" class="border-title">Buttons</h3>
+                    <p>Buttons are created with the "btn" class,followed by one of the four contextual classes "alert-success", "alert-info", "alert-warning" or "alert-danger".
+                        The classes that define the different sizes are: "btn-lg", "btn-md", "btn-sm", "btn-xs"
+                    <h4>Example :</h4>
+                    <button type="button" class="btn btn-default">Default</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-info btn-sm">Info</button>
+                    <button type="button" class="btn btn-info btn-xs">Info</button>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;<br />
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;<br />
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;<br />
+&lt;button type="button" class="btn btn-info "&gt;Info&lt;/button&gt;<br />
+&lt;button type="button" class="btn btn-info btn-sm"&gt;Info&lt;/button&gt;<br />
+&lt;button type="button" class="btn btn-info btn-xs "&gt;Info&lt;/button&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec6" class="border-title">Badges and Labels</h3>
+                    <h4>Example :</h4>
+                    <h5>Badge</h5>
+                    <p>Badges are numerical indicators of how many items are associated with a link</p>
+
+                    <a href="#">News <span class="badge">5</span></a>
+                    <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+                    <h5>Label</h5>
+                    <p>Use the "label" class,  followed by one of the six contextual classes "label-default", "label-primary", "label-success", "label-info", "label-warning" or "label-danger", within a &lt;span&gt;
+                        element to create a label.</p>
+                    <span class="label label-default">New</span>
+                    <span class="label label-primary">Primary Label</span>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;a href="#"&gt;Updates &lt;span class="badge"&gt;2&lt;/span&gt;&lt;/a&gt;<br/>
+&lt;button type="button" class="btn btn-primary"&gt;Primary &lt;span class="badge"&gt;7&lt;/span&gt;&lt;/button&gt;<br/><br/>
+&lt;span class="label label-default"&gt;New&lt;/span&gt;<br />
+&lt;span class="label label-primary"&gt;Primary Label&lt;/span&gt;
+                    </pre>
+                </section>
+                <section class="sec-space">
+                    <h3 id="sec7" class="border-title">Panels</h3>
+                    <p>A panel is a bordered box with some padding around its content.
+                        To color the panel, use contextual classes "panel-default", "panel-primary", "panel-success", "panel-info", "panel-warning", or "panel-danger"</p>
+                    <div class="mb-10">
+                        <h4>Example :</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Panel Heading</div>
+                            <div class="panel-body">Panel Content</div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Panel Heading</div>
+                            <div class="panel-body">Panel Content</div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+  &lt;div class="panel panel-default"&gt;<br />
+    &lt;div class="panel-heading"&gt;Panel Heading&lt;/div&gt;<br />
+    &lt;div class="panel-body"&gt;Panel Content&lt;/div&gt;<br />
+  &lt;/div&gt;
+<br/>
+  &lt;div class="panel panel-info"&gt;<br />
+    &lt;div class="panel-heading"&gt;Panel Heading&lt;/div&gt;<br />
+    &lt;div class="panel-body"&gt;Panel Content&lt;/div&gt;<br />
+  &lt;/div&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec8" class="border-title">List Groups</h3>
+                    <h4>Example :</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">First item</li>
+                        <li class="list-group-item">Second item</li>
+                        <li class="list-group-item">Third item</li>
+                    </ul>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;ul class="list-group"&gt;<br />
+   &lt;li class="list-group-item"&gt;First item&lt;/li&gt;<br />
+   &lt;li class="list-group-item"&gt;Second item&lt;/li&gt;<br />
+   &lt;li class="list-group-item"&gt;Third item&lt;/li&gt;<br />
+&lt;/ul&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec9" class="border-title">Dropdown</h3>
+                    <p>A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list</p>
+                    <h4>Example :</h4>
+                    <div class="mb-10">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">option1</a></li>
+                                <li><a href="#">option2</a></li>
+                                <li><a href="#">option3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"&gt;Dropdown Example<br />
+    &lt;span class="caret"&gt;&lt;/span&gt;&lt;/button&gt;<br />
+    &lt;ul class="dropdown-menu"&gt;<br />
+        &lt;li&gt;&lt;a href="#"&gt;option1&lt;/a&gt;&lt;/li&gt;<br />
+        &lt;li&gt;&lt;a href="#"&gt;option2&lt;/a&gt;&lt;/li&gt;<br />
+        &lt;li&gt;&lt;a href="#"&gt;option3&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;/ul&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec10" class="border-title">Collapsible</h3>
+                    <p>Collapsibles are useful when you want to hide and show large amount of content</p>
+                    <div class="mb-10">
+                        <h4>Example :</h4>
+                        <button data-toggle="collapse" data-target="#demo" class="btn btn-info">Collapsible</button>
+
+                        <div id="demo" class="collapse">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac dignissim massa. Phasellus tristique dui at ante tincidunt accumsan.
+                            Suspendisse quis viverra urna, quis aliquet eros. Ut felis massa, interdum a convallis convallis, mattis eu eros. Integer lacus massa, rutrum eu ultrices vitae,
+                            hendrerit vel mi. Fusce tellus risus, ultricies ac commodo ut, laoreet efficitur dolor. Nunc pulvinar elit vitae dignissim molestie. Pellentesque dignissim euismod nulla id finibus. 
+                            Duis sed risus eleifend, congue dui sed, pulvinar augue
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <p><strong>Note:</strong>The data-target id value(#demo)  should point the content(id="demo")</p>
+                    <pre>
+    &lt;button data-toggle="collapse" data-target="#demo"&gt;Collapsible&lt;/button&gt;<br />
+        &lt;div id="demo" class="collapse"&gt;<br />
+            Lorem ipsum dolor text....<br />
+        &lt;/div&gt;<br />
+    &lt;/div&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec11" class="border-title">Accordion</h3>
+                    <p>Accordion are useful when you want to hide and show large amount of content with in a group</p>
+                    <h4>Example :</h4>
+                    <div id="accordion" class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                                <h4 class="panel-title">Collapsible Group 1</h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary" >
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                                <h4 class="panel-title">Collapsible Group 2</h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" >
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                                <h4 class="panel-title">Collapsible Group 3</h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+   &lt;div id="accordion" class="panel-group" &gt;<br />
+        &lt;div class="panel panel-default" &gt;<br />
+            &lt;div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1"&gt;<br />
+                &lt;h4 class="panel-title"&gt;Collapsible Group 1&lt;/h4&gt;<br />
+            &lt;/div&gt;<br />
+            &lt;div id="collapse1" class="panel-collapse collapse in"&gt;<br />
+                &lt;div class="panel-body"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;<br />
+            &lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;div class="panel panel-primary" &gt;<br />
+            &lt;div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2" &gt;<br />
+                &lt;h4 class="panel-title"&gt;Collapsible Group 2&lt;/h4&gt;<br />
+            &lt;/div&gt;<br />
+            &lt;div id="collapse2" class="panel-collapse collapse"&gt;<br />
+                &lt;div class="panel-body"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;<br />
+            &lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;div class="panel panel-default" &gt;<br />
+            &lt;div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3" &gt;<br />
+                &lt;h4 class="panel-title"&gt;Collapsible Group 3&lt;/h4&gt;<br />
+            &lt;/div&gt;<br />
+            &lt;div id="collapse3" class="panel-collapse collapse"&gt;<br />
+                &lt;div class="panel-body"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;<br />
+            &lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+    &lt;/div&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec12" class="border-title">Modal</h3>
+                    <p>The Modal is a dialog box/popup window that is displayed on top of the current page.</p>
+                    <div class="mb-10">
+                        <h4>Example :</h4>
+                        <button type="button" data-toggle="modal" data-target="#usesiModal" class="btn btn-primary">Open Modal</button>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;button type="button" data-toggle="modal" data-target="#usesiModal" class="btn  btn-primary"&gt;Open Modal&lt;/button&gt;<br>
+        &lt;div class="modal fade" id="usesiModal" role="dialog"&gt;<br />
+    &lt;div class="modal-dialog"&gt;<br />
+    <br />
+      &lt;!-- Modal content--&gt;<br />
+      &lt;div class="modal-content"&gt;<br />
+        &lt;div class="modal-header"&gt;<br />
+          &lt;button type="button" class="close" data-dismiss="modal"&gt;&amp;times;&lt;/button&gt;<br />
+          &lt;h4 class="modal-title"&gt;Modal Header&lt;/h4&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;div class="modal-body"&gt;<br />
+          &lt;p&gt;Some text in the modal.&lt;/p&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;div class="modal-footer"&gt;<br />
+          &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;<br />
+        &lt;/div&gt;<br />
+      &lt;/div&gt;<br />
+      <br />
+    &lt;/div&gt;<br />
+  &lt;/div&gt;
+                    </pre>
+
+                    <div class="modal fade" id="usesiModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Some text in the modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section  class="sec-space">
+                    <h3 id="sec13" class="border-title">Tooltip</h3>    
+                    <p>The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element.</p>
+                    <div class="mb-10">
+                        <h4>Example :</h4>
+                        <a href="#" data-toggle="tooltip" title="Hovered!">Hover over me</a>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+    &lt;a href="#" data-toggle="tooltip" title="Hovered!"&gt;Hover over me&lt;/a&gt;
+                    </pre>
+                </section>
+
+                <section class="sec-space">
+                    <h3 id="sec14" class="border-title">Popover</h3>
+                    <p>The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.</p>
+                    <div class="mb-10">
+                        <h4>Example :</h4>
+                        <a href="javascript:void(0)" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+    &lt;a href="javascript:void(0)" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"&gt;Toggle popover&lt;/a&gt;
+                    </pre>
+                </section>
+
+
+                <section id="sec15" class="sec-space">
+                    <h3  class="border-title">Scrollspy</h3>    
+                    <p>This is used to automatically update links in a navigation list based on scroll position.
+                        <br><strong>Note:</strong> The content should be larger than it's parent height.
+                    </p>
+                    <h4>Example :</h4>
+                    <div class="pos-rel" style="padding-top:50px;">
+                        <div style="height: 400px; overflow-y: auto;" data-spy="scroll" data-target=".navbar" data-offset="50"><nav class="navbar navbar-inverse navbar-fixed-top pos-abs">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#section1">Section 1</a></li>
+                                    <li><a href="#section2">Section 2</a></li>
+                                    <li><a href="#section3">Section 3</a></li>
+                                </ul>
+                            </nav><!-- Section 1 -->
+                            <div id="section1">
+                                <h1>Section 1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum mattis neque eget posuere. Ut diam sem, consequat eget est vel, placerat mattis urna. Phasellus mattis mollis commodo. Fusce suscipit mattis urna, vel dignissim eros scelerisque eu. Nulla accumsan ex neque, sit amet eleifend arcu vehicula vel. Donec urna nisl, pharetra eu tempor et, placerat a tortor. Nunc gravida lorem lacinia, vehicula metus blandit, elementum enim. Duis sed eros tristique, scelerisque lectus sit amet, volutpat purus. Nam tincidunt et ex eu accumsan. Vivamus accumsan sed sem at dapibus. Nullam malesuada ultricies sem, ac pulvinar arcu feugiat eu. Duis a metus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam eu orci eget dui gravida posuere at nec nisl. Phasellus porta sed felis vitae sagittis. Mauris sit amet augue eget lacus fermentum aliquet. Nulla finibus sit amet mi sed hendrerit. Maecenas nec tincidunt nisi. Curabitur ante arcu, lacinia id leo bibendum, fringilla ullamcorper orci. Ut sit amet massa nisl. Nam eget mi sit amet sem volutpat lacinia eu convallis diam. Nunc viverra libero consectetur, tempus augue ut, interdum ex. Sed eget tellus ex. Maecenas mollis velit et placerat vehicula. Donec lobortis enim neque, non porta lectus semper ac. Vestibulum ut convallis mauris, ac gravida neque. Vivamus id enim justo. Curabitur convallis nibh et metus tempus, eget vulputate nulla venenatis. Maecenas a nunc tempor, facilisis ex sit amet, tincidunt odio. Maecenas sed laoreet est, eget tempor dolor. Mauris vel augue eget tellus venenatis condimentum. Nulla commodo justo eu neque semper porttitor. Morbi lacinia turpis nunc, nec ultricies elit vehicula et. Vivamus elementum gravida eleifend. Aenean luctus gravida neque, at mattis dui tincidunt quis. Cras lacinia ullamcorper lectus et euismod. Sed ac dictum quam, et pulvinar ligula. Donec sit amet turpis fringilla, viverra sem in, posuere sem. Fusce vitae lacus ante. Aliquam varius commodo vehicula. Sed ultrices augue id augue mattis porttitor. Donec vehicula leo at eros euismod blandit. Maecenas sem purus, convallis a semper quis, ultricies ac nisi. Suspendisse fermentum mauris sit amet arcu condimentum rutrum. Suspendisse quam risus, eleifend at scelerisque at, fringilla hendrerit ante. Nulla id justo id tellus condimentum fermentum. Nam sit amet dolor ipsum. Nullam sodales sollicitudin erat vel egestas. Pellentesque gravida, lacus vel pharetra condimentum, quam magna gravida est, sed tincidunt enim enim mattis purus. Phasellus dictum nibh vitae dolor lobortis, vitae porttitor felis ultricies. Sed pharetra, nibh quis consectetur elementum, ex leo malesuada enim, ac congue dolor ex non ex. Curabitur tincidunt erat nec ultricies porttitor. Donec blandit dui quis quam malesuada, ac feugiat ligula efficitur. Donec id turpis hendrerit, fringilla metus pellentesque, accumsan sapien. Suspendisse vitae nisi posuere, congue nulla varius, cursus mi. Vestibulum in ligula ut libero sagittis dapibus. Sed pretium massa ut est pulvinar pharetra. Ut viverra, orci nec faucibus lobortis, justo nulla ultricies eros, vel interdum lectus velit sed ex. Cras lobortis finibus nibh, et gravida velit tincidunt vel. Duis congue augue id lorem ullamcorper, at volutpat velit mollis.</p>
+                            </div>
+                            <div id="section2">
+                                <h1>Section 2</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum mattis neque eget posuere. Ut diam sem, consequat eget est vel, placerat mattis urna. Phasellus mattis mollis commodo. Fusce suscipit mattis urna, vel dignissim eros scelerisque eu. Nulla accumsan ex neque, sit amet eleifend arcu vehicula vel. Donec urna nisl, pharetra eu tempor et, placerat a tortor. Nunc gravida lorem lacinia, vehicula metus blandit, elementum enim. Duis sed eros tristique, scelerisque lectus sit amet, volutpat purus. Nam tincidunt et ex eu accumsan. Vivamus accumsan sed sem at dapibus. Nullam malesuada ultricies sem, ac pulvinar arcu feugiat eu. Duis a metus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam eu orci eget dui gravida posuere at nec nisl. Phasellus porta sed felis vitae sagittis. Mauris sit amet augue eget lacus fermentum aliquet. Nulla finibus sit amet mi sed hendrerit. Maecenas nec tincidunt nisi. Curabitur ante arcu, lacinia id leo bibendum, fringilla ullamcorper orci. Ut sit amet massa nisl. Nam eget mi sit amet sem volutpat lacinia eu convallis diam. Nunc viverra libero consectetur, tempus augue ut, interdum ex. Sed eget tellus ex. Maecenas mollis velit et placerat vehicula. Donec lobortis enim neque, non porta lectus semper ac. Vestibulum ut convallis mauris, ac gravida neque. Vivamus id enim justo. Curabitur convallis nibh et metus tempus, eget vulputate nulla venenatis. Maecenas a nunc tempor, facilisis ex sit amet, tincidunt odio. Maecenas sed laoreet est, eget tempor dolor. Sed pharetra, nibh quis consectetur elementum, ex leo malesuada enim, ac congue dolor ex non ex. Curabitur tincidunt erat nec ultricies porttitor. Donec blandit dui quis quam malesuada, ac feugiat ligula efficitur. Donec id turpis hendrerit, fringilla metus pellentesque, accumsan sapien. Suspendisse vitae nisi posuere, congue nulla varius, cursus mi. Vestibulum in ligula ut libero sagittis dapibus. Sed pretium massa ut est pulvinar pharetra. Ut viverra, orci nec faucibus lobortis, justo nulla ultricies eros, vel interdum lectus velit sed ex. Cras lobortis finibus nibh, et gravida velit tincidunt vel. Duis congue augue id lorem ullamcorper, at volutpat velit mollis.</p>
+                            </div>
+                            <div id="section3">
+                                <h1>Section 3</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum mattis neque eget posuere. Ut diam sem, consequat eget est vel, placerat mattis urna. Phasellus mattis mollis commodo. Fusce suscipit mattis urna, vel dignissim eros scelerisque eu. Nulla accumsan ex neque, sit amet eleifend arcu vehicula vel. Donec urna nisl, pharetra eu tempor et, placerat a tortor. Nunc gravida lorem lacinia, vehicula metus blandit, elementum enim. Duis sed eros tristique, scelerisque lectus sit amet, volutpat purus. Nam tincidunt et ex eu accumsan. Vivamus accumsan sed sem at dapibus. Nullam malesuada ultricies sem, ac pulvinar arcu feugiat eu. Duis a metus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam eu orci eget dui gravida posuere at nec nisl. Phasellus porta sed felis vitae sagittis. Mauris sit amet augue eget lacus fermentum aliquet. Nulla finibus sit amet mi sed hendrerit. Maecenas nec tincidunt nisi. Curabitur ante arcu, lacinia id leo bibendum, fringilla ullamcorper orci. Ut sit amet massa nisl. Nam eget mi sit amet sem volutpat lacinia eu convallis diam. Nunc viverra libero consectetur, tempus augue ut, interdum ex. Sed eget tellus ex. Maecenas mollis velit et placerat vehicula. Donec lobortis enim neque, non porta lectus semper ac. Vestibulum ut convallis mauris, ac gravida neque. Vivamus id enim justo. Curabitur convallis nibh et metus tempus, eget vulputate nulla venenatis. Maecenas a nunc tempor, facilisis ex sit amet, tincidunt odio. Maecenas sed laoreet est, eget tempor dolor. Mauris vel augue eget tellus venenatis condimentum. Nulla commodo justo eu neque semper porttitor. Morbi lacinia turpis nunc, nec ultricies elit vehicula et. Vivamus elementum gravida eleifend. Aenean luctus gravida neque, at mattis dui tincidunt quis. Cras lacinia ullamcorper lectus et euismod. Sed ac dictum quam, et pulvinar ligula. Donec sit amet turpis fringilla, viverra sem in, posuere sem. Fusce vitae lacus ante. Aliquam varius commodo vehicula. Sed ultrices augue id augue mattis porttitor. Donec vehicula leo at eros euismod blandit. Maecenas sem purus, convallis a semper quis, ultricies ac nisi. Suspendisse fermentum mauris sit amet arcu condimentum rutrum. Suspendisse quam risus, eleifend at scelerisque at, fringilla hendrerit ante. Nulla id justo id tellus condimentum fermentum. Nam sit amet dolor ipsum. Nullam sodales sollicitudin erat vel egestas. Pellentesque gravida, lacus vel pharetra condimentum, quam magna gravida est, sed tincidunt enim enim mattis purus. Phasellus dictum nibh vitae dolor lobortis, vitae porttitor felis ultricies. Sed pharetra, nibh quis consectetur elementum, ex leo malesuada enim, ac congue dolor ex non ex. Curabitur tincidunt erat nec ultricies porttitor. Donec blandit dui quis quam malesuada, ac feugiat ligula efficitur. Donec id turpis hendrerit, fringilla metus pellentesque, accumsan sapien. Suspendisse vitae nisi posuere, congue nulla varius, cursus mi. Vestibulum in ligula ut libero sagittis dapibus. Sed pretium massa ut est pulvinar pharetra. Ut viverra, orci nec faucibus lobortis, justo nulla ultricies eros, vel interdum lectus velit sed ex. Cras lobortis finibus nibh, et gravida velit tincidunt vel. Duis congue augue id lorem ullamcorper, at volutpat velit mollis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;div class="pos-rel"&gt;<br />
+&lt;div style="height: 400px; overflow-y: auto;" data-spy="scroll" data-target=".navbar" data-offset="50"&gt;
+&lt;nav class="navbar navbar-inverse navbar-fixed-top pos-abs"&gt;<br />
+&lt;ul class="nav navbar-nav"&gt;<br />
+&lt;li&gt;&lt;a href="#section1"&gt;Section 1&lt;/a&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;a href="#section2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;a href="#section3"&gt;Section 3&lt;/a&gt;&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/nav&gt;&lt;!-- Section 1 --&gt;<br />
+&lt;div id="section1"&gt;<br />
+&lt;h1&gt;Section 1&lt;/h1&gt;<br />
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula leo at eros euismod blandit. Maecenas sem purus, convallis a semper quis, ultricies ac nisi. Suspendisse fermentum mauris sit amet arcu condimentum rutrum. Suspendisse quam risus, eleifend at scelerisque at, fringilla hendrerit ante. Nulla id justo id tellus condimentum fermentum. Nam sit amet dolor ipsum. Nullam sodales sollicitudin erat vel egestas. Pellentesque gravida, lacus vel pharetra condimentum, quam magna gravida est, sed tincidunt enim enim mattis purus. Phasellus dictum nibh vitae dolor lobortis, vitae porttitor felis ultricies. Sed pharetra, nibh quis consectetur elementum, ex leo malesuada enim, ac congue dolor ex non ex. Curabitur tincidunt erat nec ultricies porttitor. Donec blandit dui quis quam malesuada, ac feugiat ligula efficitur. Donec id turpis hendrerit, fringilla metus pellentesque, accumsan sapien. Suspendisse vitae nisi posuere, congue nulla varius, cursus mi. Vestibulum in ligula ut libero sagittis dapibus. Sed pretium massa ut est pulvinar pharetra. Ut viverra, orci nec faucibus lobortis, justo nulla ultricies eros, vel interdum lectus velit sed ex. Cras lobortis finibus nibh, et gravida velit tincidunt vel. Duis congue augue id lorem ullamcorper, at volutpat velit mollis.&lt;/p&gt;<br />
+&lt;/div&gt;<br />
+&lt;div id="section2"&gt;<br />
+&lt;h1&gt;Section 2&lt;/h1&gt;<br />
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nunc tempor, facilisis ex sit amet, tincidunt odio. Maecenas sed laoreet est, eget tempor dolor. Mauris vel augue eget tellus venenatis condimentum. Nulla commodo justo eu neque semper porttitor. Morbi lacinia turpis nunc, nec ultricies elit vehicula et. Vivamus elementum gravida eleifend. Aenean luctus gravida neque, at mattis dui tincidunt quis. Cras lacinia ullamcorper lectus et euismod. Sed ac dictum quam, et pulvinar ligula. Donec sit amet turpis fringilla, viverra sem in, posuere sem. Fusce vitae lacus ante. Aliquam varius commodo vehicula. Sed ultrices augue id augue mattis porttitor. Donec vehicula leo at eros euismod blandit. Maecenas sem purus, convallis a semper quis, ultricies ac nisi. Suspendisse fermentum mauris sit amet arcu condimentum rutrum. Suspendisse quam risus, eleifend at scelerisque at, fringilla hendrerit ante. Nulla id justo id tellus condimentum fermentum. Nam sit amet dolor ipsum. Nullam sodales sollicitudin erat vel egestas. Pellentesque gravida, lacus vel pharetra condimentum, quam magna gravida est, sed tincidunt enim enim mattis purus. Phasellus dictum nibh vitae dolor lobortis, vitae porttitor felis ultricies. Sed pharetra, nibh quis consectetur elementum, ex leo malesuada enim, ac congue dolor ex non ex. Curabitur tincidunt erat nec ultricies porttitor. Donec blandit dui quis quam malesuada, ac feugiat ligula efficitur. Donec id turpis hendrerit, fringilla metus pellentesque, accumsan sapien. Suspendisse vitae nisi posuere, congue nulla varius, cursus mi. Vestibulum in ligula ut libero sagittis dapibus. Sed pretium massa ut est pulvinar pharetra. Ut viverra, orci nec faucibus lobortis, justo nulla ultricies eros, vel interdum lectus velit sed ex. .&lt;/p&gt;<br />
+&lt;/div&gt;<br />
+&lt;div id="section3"&gt;<br />
+&lt;h1&gt;Section 3&lt;/h1&gt;<br />
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum nibh vitae dolor lobortis, vitae porttitor felis ultricies. Sed pharetra, nibh quis consectetur elementum, ex leo malesuada enim, ac congue dolor ex non ex. Curabitur tincidunt erat nec ultricies porttitor. Donec blandit dui quis quam malesuada, ac feugiat ligula efficitur. Donec id turpis hendrerit, fringilla metus pellentesque, accumsan sapien. Suspendisse vitae nisi posuere, congue nulla varius, cursus mi. Vestibulum in ligula ut libero sagittis dapibus. Sed pretium massa ut est pulvinar pharetra. Ut viverra, orci nec faucibus lobortis, justo nulla ultricies eros, vel interdum lectus velit sed ex. Cras lobortis finibus nibh, et gravida velit tincidunt vel. Duis congue augue id lorem ullamcorper, at volutpat velit mollis.&lt;/p&gt;<br />
+&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;/div&gt;
+                    </pre>
+                </section>
+
+                <section id="sec16" class="sec-space">
+                    <h3  class="border-title">Tab</h3>    
+                    <p>Tabs are used to separate content into different panes where each pane is viewable one at a time.</p>
+                    <h4>Example :</h4>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <h3>HOME</h3>
+                            <p>Some content.</p>
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            <h3>Menu 1</h3>
+                            <p>Some content in menu 1.</p>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;ul class="nav nav-tabs"&gt;<br />
+  &lt;li class="active"&gt;&lt;a data-toggle="tab" href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br />
+  &lt;li&gt;&lt;a data-toggle="tab" href="#menu1"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+<br />
+&lt;div class="tab-content"&gt;<br />
+  &lt;div id="home" class="tab-pane fade in active"&gt;<br />
+    &lt;h3&gt;HOME&lt;/h3&gt;<br />
+    &lt;p&gt;Some content.&lt;/p&gt;<br />
+  &lt;/div&gt;<br />
+  &lt;div id="menu1" class="tab-pane fade"&gt;<br />
+    &lt;h3&gt;Menu 1&lt;/h3&gt;<br />
+    &lt;p&gt;Some content in menu 1.&lt;/p&gt;<br />
+  &lt;/div&gt;<br />
+&lt;/div&gt; 
+                    </pre>
+
+                </section>
+
+                <section  class="sec-space">
+                    <h3 id="sec17" class="border-title">Slider (carousel)</h3> 
+                    <p> It is used for cycling through elements, like a carousel.</p>
+                    <h4>Example :</h4>
+                    <div id="usesiCarousel" class="carousel slide mb-20" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators pos-abs" style="bottom:20px;">
+                            <li data-target="#usesiCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#usesiCarousel" data-slide-to="1"></li>
+                            <li data-target="#usesiCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="http://assets.usesi.com/static-media/usesi-banner.jpg" alt="slider1">
+                                <h1 class="text-white pos-abs" style="top:15px;left:15px">Slider text</h1>
+                            </div>
+
+                            <div class="item">
+                                <img src="http://assets.usesi.com/static-media/usesi-banner.jpg" alt="slider2">
+                                <h1 class="text-white pos-abs" style="top:15px;right:15px">Slider text 2</h1>
+                            </div>
+
+                            <div class="item">
+                                <img src="http://assets.usesi.com/static-media/usesi-banner.jpg" alt="slider3">
+                                <h1 class="text-white pos-abs" style="bottom:15px;right:15px">Slider text3</h1>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#usesiCarousel" data-slide="prev">
+                            <span class="fa fa-chevron-left icon-prev" style="font-size:46px"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#usesiCarousel" data-slide="next">
+                            <span class="fa fa-chevron-right icon-next" style="font-size:46px"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+&lt;div id="usesiCarousel" class="carousel slide" data-ride="carousel"&gt;<br />
+                &lt;!-- Indicators --&gt;<br />
+                &lt;ol class="carousel-indicators pos-abs" style="bottom:20px;"&gt;<br />
+                    &lt;li data-target="#usesiCarousel" data-slide-to="0" class="active"&gt;&lt;/li&gt;<br />
+                    &lt;li data-target="#usesiCarousel" data-slide-to="1"&gt;&lt;/li&gt;<br />
+                    &lt;li data-target="#usesiCarousel" data-slide-to="2"&gt;&lt;/li&gt;<br />
+                &lt;/ol&gt;<br />
+<br />
+                &lt;div class="carousel-inner"&gt;<br />
+                    &lt;div class="item active"&gt;<br />
+                        &lt;img src="http://assets.usesi.com/static-media/usesi-banner.jpg" alt="slider1"&gt;<br />
+                        &lt;h1 class="text-white pos-abs" style="top:15px;left:15px"&gt;Slider text&lt;/h1&gt;<br />
+                    &lt;/div&gt;<br />
+                    &lt;div class="item"&gt;<br />
+                        &lt;img src="http://assets.usesi.com/static-media/usesi-banner.jpg" alt="slider2"&gt;<br />
+                        &lt;h1 class="text-white pos-abs" style="top:15px;right:15px"&gt;Slider text 2&lt;/h1&gt;<br />
+                    &lt;/div&gt;<br />
+                    &lt;div class="item"&gt;<br />
+                        &lt;img src="http://assets.usesi.com/static-media/usesi-banner.jpg" alt="slider3"&gt;<br />
+                        &lt;h1 class="text-white pos-abs" style="bottom:15px;right:15px"&gt;Slider text3&lt;/h1&gt;<br />
+                    &lt;/div&gt;<br />
+                &lt;/div&gt;<br />
+                &lt;!-- Left and right controls --&gt;<br />
+                &lt;a class="left carousel-control" href="#usesiCarousel" data-slide="prev"&gt;<br />
+                    &lt;span class="fa fa-chevron-left icon-prev" style="font-size:46px"&gt;&lt;/span&gt;<br />
+                    &lt;span class="sr-only"&gt;Previous&lt;/span&gt;<br />
+                &lt;/a&gt;<br />
+                &lt;a class="right carousel-control" href="#usesiCarousel" data-slide="next"&gt;<br />
+                    &lt;span class="fa fa-chevron-right icon-next" style="font-size:46px"&gt;&lt;/span&gt;<br />
+                    &lt;span class="sr-only"&gt;Next&lt;/span&gt;<br />
+                &lt;/a&gt;<br />
+            &lt;/div&gt;
+                    </pre>
+                </section>
+
+                <section  class="sec-space">
+                    <h3 id="sec18" class="border-title">Grid System</h3> 
+                    <p>The grid system allows up to 12 columns across the page.
+                        The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.</p>
+                    <h4>Basic Structure</h4>
+                    <pre> &lt;div class="row"&gt;<br />
+  &lt;div class="col-d*-s*"&gt;&lt;/div&gt;<br />
+  &lt;div class="col-d*-s*"&gt;&lt;/div&gt;<br />
+  &lt;div class="col-d*-s*"&gt;&lt;/div&gt;<br />
+&lt;/div&gt;</pre>
+                    <p><strong>Note:&nbsp;</strong> 
+                        (d*)-> device specific class [xs,sm,md,lg] , (s*)->  size of the column [1-12].
+                        1.create a row ( &lt;div class="row"&gt). 
+                        2.add the desired number of columns (tags with appropriate .col-d*-s* classes). 
+                        3.The numbers in (s*) should always add up to 12 for each row.
+                    </p>
+
+                    <h4>device specific classes (d*)</h4>
+                    <p>The classes below can be combined to create more dynamic and flexible layouts.</p>
+                    <ul>
+                        <li>xs (for phones <767px)</li>
+                        <li>sm (for tablets >767px)</li>
+                        <li>md (for desktops >992px)</li>
+                        <li>lg (for larger desktops >1200px)</li>
+                    </ul>
+                    <h4>Equal Columns</h4>
+                    <p><strong>Note: </strong>For this example the columns are styled(height and background) to make it clear.
+                        The text like "1 0f 2" can be replaced by another content</p>
+                    <h4>Example :</h4>
+                    <p><strong>Two column</strong></p>
+                    <div class="row mb-10">
+                        <div class="col-md-6 d-table">
+                            <div class="grid-ex">1 of 2</div>
+                        </div>
+                        <div class="col-md-6 d-table">
+                            <div class="grid-ex">1 of 2</div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+                    &lt;div class="row"&gt;<br />
+                    &lt;div class="col-md-6"&gt;1 of 2&lt;/div&gt;<br />
+                    &lt;div class="col-md-6"&gt;1 of 2&lt;/div&gt;<br />
+                    &lt;/div&gt;
+                    </pre>
+                    <p><strong>Three column</strong></p>
+                    <div class="row mb-10">
+                        <div class="col-md-4 d-table">
+                            <div class="grid-ex"> 1 of 3</div>
+                        </div>
+                        <div class="col-md-4 d-table">
+                            <div class="grid-ex">1 of 3</div>
+                        </div>
+                        <div class="col-md-4 d-table">
+                            <div class="grid-ex">1 of 3</div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+                    &lt;div class="row"&gt;<br />
+                    &lt;div class="col-md-4"&gt;1 of 3&lt;/div&gt;<br />
+                    &lt;div class="col-md-4"&gt;1 of 3&lt;/div&gt;<br />
+                    &lt;div class="col-md-4"&gt;1 of 3&lt;/div&gt;<br />
+                    &lt;/div&gt;
+                    </pre>
+                    <h4>Unequal Columns</h4>
+                    <h4>Example :</h4>
+                    <div class="row mb-10">
+                        <div class="col-md-3 d-table">
+                            <div class="grid-ex"> 3 of 12</div>
+                        </div>
+                        <div class="col-md-9 d-table">
+                            <div class="grid-ex">9 of 12</div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+                    &lt;div class="row"&gt;<br />
+                    &lt;div class="col-md-3"&gt;3 of 12&lt;/div&gt;<br />
+                    &lt;div class="col-md-9"&gt;9 of 12&lt;/div&gt;<br />
+                    &lt;/div&gt;
+                    </pre>
+                    <h4>Example :</h4>
+                    <div class="row mb-10">
+                        <div class="col-md-5 d-table">
+                            <div class="grid-ex"> 5 of 12</div>
+                        </div>
+                        <div class="col-md-7 d-table">
+                            <div class="grid-ex">7 of 12</div>
+                        </div>
+                    </div>
+                    <h4>Markup :</h4>
+                    <pre>
+                    &lt;div class="row"&gt;<br />
+                    &lt;div class="col-md-5"&gt;5 of 12&lt;/div&gt;<br />
+                    &lt;div class="col-md-7"&gt;7 of 12&lt;/div&gt;<br />
+                    &lt;/div&gt;
+                    </pre>
+                    <h4>Example (for device specific) :</h4>
+                    <div class="row mb-10">
+                        <div class="col-xs-12 col-sm-4 col-md-3 d-table">
+                            <div class="grid-ex"> 3 of 12</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-sm-6 col-md-6 d-table">
+                            <div class="grid-ex">6 of 12</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4  col-md-3 d-table">
+                            <div class="grid-ex">3 of 12</div>
+                        </div>
+                    </div>
+                    <p><strong>Result:</strong><br />
+                        Mobile: One by one Boxes<br />
+                        Tablet: Three equal Boxes</p>
+                    <h4>Markup :</h4>
+                    <pre>
+                    &lt;div class="row"&gt;<br />
+                    &lt;div class="col-xs-12 col-sm-4 col-md-3"&gt;3 of 12&lt;/div&gt;<br />
+                    &lt;div class="col-xs-12 col-sm-4 col-md-6"&gt;6 of 12&lt;/div&gt;<br />
+                    &lt;div class="col-xs-12 col-sm-4 col-md-3"&gt;3 of 12&lt;/div&gt;<br />
+                    &lt;/div&gt;
+                    </pre>
+                </section>
+
+            </div>
+
+            <nav class="col-sm-3 hidden-xs">
+                <ul class="list-group side-nav" data-spy="affix" data-offset-top="230" style="width:270px;max-height:calc(90vh - 150px);overflow-y: auto;">
+                    <li class="list-group-item"><strong><a href="#sec1">Text/Typography</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec2">Tables</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec3">Wells</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec4">Allerts</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec5">Buttons</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec6">Badges and labels</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec7">Panels</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec8">List Groups</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec9">Dropdown</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec10">Collapsible</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec11">Accordion</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec12">Modal</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec13">Tooltip</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec14">Popover</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec15">Scrollspy</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec16">Tab</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec17">Slider (carousel)</a></strong></li>
+                    <li class="list-group-item"><strong><a href="#sec18">Grid System</a></strong></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <script src="bootstrap/bootstrap.min.js"></script>
+    </body>
+</html>
